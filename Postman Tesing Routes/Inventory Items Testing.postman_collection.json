@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "3d75518b-4dfa-41d7-bcb6-dd7289ae0da2",
+		"name": "Inventory Items Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25768725"
+	},
+	"item": [
+		{
+			"name": "List all items and inventory",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/food_item/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"food_item",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add to Item as well as to Inventory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Item 8\",\n    \"description\": \"This is the eigth item in pantry\",\n    \"preparation_details\": \"{\\\"hr\\\":0,\\\"min\\\":20,\\\"sec\\\":0}\",\n    \"stock\": \"90\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/food_item/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"food_item",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inventory Update for item (using inventory id)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"stock\": \"80\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/food_item/22",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"food_item",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update rating for an item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"item_id\" : 24,\n    \"rating\" : 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/food_item/rating",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"food_item",
+						"rating"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete an item from inventory (not the actual item)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/food_item/23",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"food_item",
+						"23"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
