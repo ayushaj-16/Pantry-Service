@@ -1,0 +1,25 @@
+# inherit_from:
+#   - .rubocop_airbnb.yml
+
+Layout/IndentationWidth:
+  Description: Use 2 spaces for indentation.
+  StyleGuide: https://github.com/rubocop-hq/ruby-style-guide#spaces-indentation
+  Enabled: true
+  Width: 2
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 200
+  AllowURI: true
+Style/RedundantReturn:
+  AllowMultipleReturnValues: true
+
+Metrics/MethodLength:
+  Enabled: true
+  Max: 30
+
+AllCops:
+  Exclude:
+    - '/Users/aj/Desktop/Demo Project/pantry_backend/db/schema.rb'

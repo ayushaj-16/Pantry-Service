@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  employee_id: 
+  token: MyString
+  expireAt: MyString
+  datetime: MyString
+
+two:
+  employee_id: 
+  token: MyString
+  expireAt: MyString
+  datetime: MyString
